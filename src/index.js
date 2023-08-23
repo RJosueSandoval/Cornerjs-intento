@@ -32,13 +32,29 @@ const config = {
   }
 };
 cornerstoneWADOImageLoader.webWorkerManager.initialize(config);
-
 const mriImages = [
   "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00000.dcm",
-  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00001.dcm"
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00001.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00005.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00008.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00010.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00013.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00016.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00018.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00021.dcm",
+  "wadouri:https://testdicombucket.s3.us-east-2.amazonaws.com/series-00000/series-00000/image-00030.dcm"
 ];
 const segmantationImages = [
   "https://testdicombucket.s3.us-east-2.amazonaws.com/image.0000.jpg",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
+  "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm",
   "dicomweb:https://testdicombucket.s3.us-east-2.amazonaws.com/2a3c96dd-e659-470a-a83f-8c1f52752399.dcm"
 ];
 
@@ -158,8 +174,8 @@ const App = () => {
           // scroll forward
           if (event.detail.detail.deltaY < 0) {
             setWheelY((position) => {
-              if (position >= 1) {
-                position = 1;
+              if (position >= 9) {
+                position = 9;
               } else {
                 position += 1;
               }
