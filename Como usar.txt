@@ -1,0 +1,8 @@
+Instalar librerias, en sus versiones deprecadas
+npm install --save --legacy-peer-deps
+
+Fijar modo de uso legacy
+set NODE_OPTIONS=--openssl-legacy-provider
+
+Correr el archivo
+npm run start
